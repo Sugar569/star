@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.head-container {
+    width: 100%;
+    height: 100%;
+}
+
+.head-container .head-title {
+    position: absolute;
+    top:20px;
+    left: 35px;
+    font-size: 15px;
+    color: white;
+    z-index: 3;
+    animation: fadein_logo 1s ease 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadein_logo {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.head-menu ul {
+    display: flex;
+    position: absolute;
+    top: 28px;
+    left: 77%;
+}
+
+.head-menu ul li {
+    margin-left: 30px;
+    z-index: 3;
+    animation: fadein_menu 1s ease 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadein_menu {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.head-menu ul li a {
+    color: white;
+    transition: 0.3s;
+}
+
+.head-menu ul li a:hover {
+    opacity: 50%;
+}
+
+.main-logo {
+    width: fit-content;
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    top: 280px;
+    left: 32%;
+    z-index: 3;
+    border-bottom: solid 5px white;
+    animation: 
+        border_anim 2s ease;
+}
+
+@keyframes border_anim {
+    from{
+        width: 0%;
+    }
+
+    to{
+        width: 42.1%;
+    }
+    
+}
+
+.border {
+    width: 100%;
+    border-bottom: solid 5px white;
+}
+
+.main-button {
+    z-index: 3;
+    width: 150px;
+    height: 60px;
+    position: absolute;
+    top: 550px;
+    left: 45%;
+    background-color: rgba(0,0,0,0);
+    border: solid 2px white;
+    color: white;
+    font-size: 15px;
+    border-radius: 40px;
+    transition: all 0.5s;
+    animation: fadein_button 1s ease 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.main-button:hover {
+    color: black;
+    background-color: white;
+    transform: scale(1.1);
+    letter-spacing: 0.1em;
+
+}
+
+@keyframes fadein_button {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: overlay;
+    background-color: rgb(154, 157, 160);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+@media  screen and (max-width: 600px) {
+
+    
+}
+
